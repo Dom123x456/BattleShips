@@ -69,7 +69,7 @@ while turns > 0:
         print_board(GUESS_BOARD)
         row, column = get_battleship_location()
         if GUESS_BOARD[row][column] == "-":
-            print("You guessed that one already.")
+            print("Choice already chosen pls select another.")
             elif HIDDEN_BOARD[row][column] == "X":
             print("Hit")
             GUESS_BOARD[row][column] = "X" 
