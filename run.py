@@ -65,3 +65,8 @@ turns = 10
 print_board(HIDDEN_BOARD)
 print_board(GUESS_BOARD)
 while turns > 0:
+        print('Guess a battleship location')
+        print_board(GUESS_BOARD)
+        row, column = get_battleship_location()
+        if GUESS_BOARD[row][column] == "-":
+            print("You guessed that one already.")
