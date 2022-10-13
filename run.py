@@ -68,19 +68,20 @@ while turns > 0:
         print('Guess a battleship location')
         print_board(GUESS_BOARD)
         row, column = get_battleship_location()
-        if GUESS_BOARD[row][column] == "#":
-            print("Choice already chosen pls select another.")
-            elif HIDDEN_BOARD[row][column] == "X":
+        if GUESS_BOARD[row][column] == "-":
+            print("You guessed that one already.")
+        elif HIDDEN_BOARD[row][column] == "X":
             print("Hit")
-            GUESS_BOARD[row][column] = "X" 
-            turns -= 1  
-            else:
-                print("Miss")
-                GUESS_BOARD[row][column] ='#'
-            if count_hit_battleships(GUESS_BOARD) == 5:
-            print("You Win Congrats!")
+            GUESS_BOARD[row][column] = "X"
+            turns -= 1
+        else:
+            print("MISS!")
+            GUESS_BOARD[row][column] = "#"   
+            turns -= 1     
+        if count_hit_battleships(GUESS_BOARD) == 5:
+            print("You win Congrats!")
             break
-        print("You have" + str(turns) +"turns remaining")
-        if turns = 0:
+        print("You have " + str(turns) + " turns left")
+        if turns == 0:
             print("No turns left Game over")
             break
