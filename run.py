@@ -37,3 +37,15 @@ def create_battleships(board):
             ship_row, ship_column = randint(0, 7), randint(0, 7)
             board[ship_row][ship_column] = "X"
 
+
+def get_battleship_location():
+    row = input("Enter the row of the Battleship: ").upper()
+    while row not in "12345678":
+        print('Not valid choice, select a valid row.')
+        row = input("Enter row of the Battleship: ").upper()
+    column = input("Enter column of the Battleship: ").upper()
+    while column not in "ABCDEFGH":
+        print('Not valid choice, select a valid column.')
+        column = input("Enter the column of the Battleship: ").upper()
+    return int(row) - 1, letters_to_numbers[column]
+
