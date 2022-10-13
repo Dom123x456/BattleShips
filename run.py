@@ -29,3 +29,11 @@ def print_board(board):
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
+
+def create_battleships(board):
+    for ship in range(5):
+        ship_row, ship_column = randint(0, 7), randint(0, 7)
+        while board[ship_row][ship_column] == "X":
+            ship_row, ship_column = randint(0, 7), randint(0, 7)
+            board[ship_row][ship_column] = "X"
+
