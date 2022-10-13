@@ -74,6 +74,13 @@ while turns > 0:
             print("Hit")
             GUESS_BOARD[row][column] = "X" 
             turns -= 1  
+            else:
+                print("Miss")
+                GUESS_BOARD[row][column] ='#'
             if count_hit_battleships(GUESS_BOARD) == 5:
             print("You Win Congrats!")
+            break
+        print("You have" + str(turns) +"turns remaining")
+        if turns = 0:
+            print("No turns left Game over")
             break
