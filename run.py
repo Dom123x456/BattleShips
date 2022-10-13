@@ -6,7 +6,6 @@
 
 from random import randint
 
-
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
@@ -22,6 +21,7 @@ letters_to_numbers = {
     'H': 7
 }
 
+
 def print_board(board):
     print('A B C D E F G H')
     print('\\\\\\\\///////')
@@ -29,6 +29,7 @@ def print_board(board):
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
+
 
 def create_battleships(board):
     for ship in range(5):
@@ -49,6 +50,7 @@ def get_battleship_location():
         column = input("Enter the column of the Battleship: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
+
 def count_hit_battleships(board):
     count = 0
     for row in board:
@@ -56,6 +58,7 @@ def count_hit_battleships(board):
             if column == "X":
                 count += 1
     return count
+
 
 create_battleships(HIDDEN_BOARD)
 turns = 10
