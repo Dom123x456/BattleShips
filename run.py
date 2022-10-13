@@ -70,3 +70,7 @@ while turns > 0:
         row, column = get_battleship_location()
         if GUESS_BOARD[row][column] == "-":
             print("You guessed that one already.")
+            elif HIDDEN_BOARD[row][column] == "X":
+            print("Hit")
+            GUESS_BOARD[row][column] = "X" 
+            turns -= 1  
