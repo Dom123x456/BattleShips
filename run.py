@@ -56,3 +56,9 @@ def count_hit_battleships(board):
             if column == "X":
                 count += 1
     return count
+
+create_battleships(HIDDEN_BOARD)
+turns = 10
+print_board(HIDDEN_BOARD)
+print_board(GUESS_BOARD)
+# while turns > 0:
