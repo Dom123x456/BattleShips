@@ -23,14 +23,16 @@ letters_to_numbers = {
 
 
 def print_board(board):
-    print('A B C D E F G H')
+    print(' A B C D E F G H')
     print('\\\\\\\\///////')
     row_number = 1
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
+
 # computer create 5 ships onto the board
+
 def create_battleships(board):
     for ship in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
@@ -50,7 +52,9 @@ def get_battleship_location():
         column = input("Enter the column of the Battleship: ").upper()
     return int(row) - 1, letters_to_numbers[column]
 
+
 # check if ships are hit
+
 def count_hit_battleships(board):
     count = 0
     for row in board:
@@ -59,7 +63,9 @@ def count_hit_battleships(board):
                 count += 1
     return count
 
+
 # turns amount and if turns are gone print message game over or repeated input
+
 create_battleships(HIDDEN_BOARD)
 turns = 10
 print_board(HIDDEN_BOARD)
