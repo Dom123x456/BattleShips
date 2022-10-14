@@ -13,7 +13,7 @@ GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 def title():
     """
-    Refreshes the title after each screen has been cleared
+    Refreshes the title
     """
     print("<==>  /Battleship/  <==>\n")
     sleep(1)
