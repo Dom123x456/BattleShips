@@ -94,7 +94,7 @@ def controls():
 
 def print_board(board):
     print(' A B C D E F G H')
-    print('\\\\\\\\///////')
+    print('_______________________________')
     row_number = 1
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
