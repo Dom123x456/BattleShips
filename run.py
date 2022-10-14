@@ -40,6 +40,8 @@ def create_battleships(board):
             ship_row, ship_column = randint(0, 7), randint(0, 7)
             board[ship_row][ship_column] = "X"
 
+# when input is incorrect print error messages
+
 
 def get_battleship_location():
     row = input("Enter the row of the Battleship: ").upper()
