@@ -93,7 +93,10 @@ def controls():
 
 
 def print_board(board):
-    print(' A B C D E F G H')
+    """
+    generates board for battleship game
+    """
+    print('   A B C D E F G H')
     print('_______________________________')
     row_number = 1
     for row in board:
