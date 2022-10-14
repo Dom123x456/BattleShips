@@ -2,7 +2,7 @@
 # X for placement of ship and hit of ballteship
 # ' ' for space that is avalible
 # '#' for hit battle ship
-
+import os
 from time import sleep
 from random import randint
 # Board Battleship for there locatons on the board
