@@ -59,7 +59,7 @@ def count_hit_battleships(board):
                 count += 1
     return count
 
-
+# turns amount and if turns are gone print message game over or repeated input
 create_battleships(HIDDEN_BOARD)
 turns = 10
 print_board(HIDDEN_BOARD)
