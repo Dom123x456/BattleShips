@@ -72,24 +72,20 @@ def controls():
     """
 
     controls_list = [
-        "You must input two coordinates, a number and a letter " +
-        "in order to select the \ngrid you want to fire upon:",
-        "\n1. Select the grid ROW which will appear as a NUMBER",
-        "2. Select the grid COLUMN which will appear as a LETTER\n",
+        "You must input a number and a letter seperatly" +
+        "Select the grid ROW which will appear as a NUMBER",
+        "Select the grid COLUMN which will appear as a LETTER",
+        "To select the grid you want to target:",
         "* If a ship is within the grid coordinates you selected, " +
-        "a hit will be \n  registered",
-        "* If the grid is empty, it will be registered as a miss",
-        "* The size of the grid and the amount of shells you have " +
-        "will be determined by \n  the difficulty level you choose"
+        "a hit will be registered as an X",
+        "* If the grid is empty, it will be registered as a miss #",
     ]
     title()
-    print("Here is what you must do to defeat the invaders:")
+    print("This is what you must do to be successful:")
     sleep(2)
     for i in controls_list:
         print(i)
     sleep(2)
-    print("Are you ready? (don't worry we'll show " +
-          "you the instructions again)\n")
     resume_key()
 
 
