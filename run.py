@@ -129,6 +129,9 @@ def create_battleships(board):
 
 
 def get_battleship_location():
+    """
+    when entering the wrong input to either row or column print error message
+    """
     row = input("Enter the row of the Battleship: ").upper()
     while row not in "12345678":
         print('Not valid choice, select a valid row.')
