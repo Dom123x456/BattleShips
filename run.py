@@ -7,7 +7,7 @@
 from random import randint
 # Board Battleship for there locatons on the board
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
-
+# Board for displaying hits and misses
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 letters_to_numbers = {
