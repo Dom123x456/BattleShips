@@ -19,7 +19,27 @@ def title():
     sleep(1)
 
 
+def introduction():
+    """
+    This gives the user a brief background story
+    """
 
+    intro = [
+        "\nYour Mission\n",
+        "Russian forces are grouping on the north pacific!\n",
+        "The enemy forces are setting a blockade " +
+        "The enemy will have full control of main shiping lanes. " +
+        "Your mission is to destroy the main guarding force of the blockade" +
+        "To allow the other ships" +
+        "To make a wedge to stop enemy reinforcements"
+        "\nGoodLuck!\n"
+    ]
+    title()
+    print("\nIncoming message from Fleet Command......\n")
+    sleep(2)
+    for i in intro:
+        print(i)
+    continue_key()
 
 
 
