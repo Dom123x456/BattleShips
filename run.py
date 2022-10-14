@@ -11,9 +11,25 @@ HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 
+
+
+def resume_key():
+    """
+    This function avoids repeating the below two commands
+    """
+    continue_pressed = ['c']
+    while True:
+        c_pressed = input("Press 'c' to and hit return continue....")
+        if c_pressed.lower() in continue_pressed:
+            return clear_screen()
+        else:
+            print("Nope, please press 'c' and hit return to continue")
+
+
+
 def title():
     """
-    Refreshes the title
+    Refreshes the title when the screen has been cleared
     """
     print("<==>  /Battleship/  <==>\n")
     sleep(1)
@@ -39,7 +55,7 @@ def introduction():
     sleep(2)
     for i in intro:
         print(i)
-    continue_key()
+    resume_key()
 
 
 
