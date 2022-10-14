@@ -33,6 +33,7 @@ letters_to_numbers = {
 
 # computer create 5 ships onto the board
 
+
 def create_battleships(board):
     for ship in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
