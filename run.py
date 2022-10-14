@@ -3,7 +3,7 @@
 # ' ' for space that is avalible
 # '#' for hit battle ship
 
-
+from time import sleep
 from random import randint
 # Board Battleship for there locatons on the board
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
@@ -13,9 +13,9 @@ GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 def title():
     """
-    Reprints the title after each clear screen
+    Refreshes the title after each screen has been cleared
     """
-    print("<====>  BATTLESHIP!  <====>\n")
+    print("<==>  /Battleship/  <==>\n")
     sleep(1)
 
 
