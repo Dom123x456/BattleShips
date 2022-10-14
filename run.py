@@ -59,6 +59,9 @@ def get_battleship_location():
 # check if ships are hit
 
 def count_hit_battleships(board):
+    """
+    Function to see if ships are hit
+    """
     count = 0
     for row in board:
         for column in row:
@@ -74,23 +77,23 @@ turns = 10
 print_board(HIDDEN_BOARD)
 print_board(GUESS_BOARD)
 while turns > 0:
-        print('Guess a battleship location')
-        print_board(GUESS_BOARD)
-        row, column = get_battleship_location()
-        if GUESS_BOARD[row][column] == "-":
-            print("You guessed that one already.")
-        elif HIDDEN_BOARD[row][column] == "X":
-            print("Hit")
-            GUESS_BOARD[row][column] = "X"
-            turns -= 1
-        else:
-            print("MISS!")
-            GUESS_BOARD[row][column] = "#"   
-            turns -= 1     
-        if count_hit_battleships(GUESS_BOARD) == 5:
-            print("You win Congrats!")
-            break
-        print("You have " + str(turns) + " turns left")
-        if turns == 0:
-            print("No turns left Game over")
-            break
+    print('Guess a battleship location')
+    print_board(GUESS_BOARD)
+    rows, columns = get_battleship_location()
+    if GUESS_BOARD[rows][columns] == "-":
+        print("You guessed that one already.")
+    elif HIDDEN_BOARD[rows][columns] == "X":
+        print("Hit")
+        GUESS_BOARD[rows][columns] = "X"
+        turns -= 1
+    else:
+        print("MISS!")
+        GUESS_BOARD[rows][columns] = "#"
+        turns -= 1
+    if count_hit_battleships(GUESS_BOARD) == 5:
+        print("You win Congrats!")
+        break
+    print("You have " + str(turns) + " turns left")
+    if turns == 0:
+        print("No turns left Game over")
+        break
