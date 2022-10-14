@@ -34,7 +34,6 @@ def resume_key():
             print("Nope, please press 'c' and hit return to continue")
 
 
-
 def title():
     """
     Refreshes the title when the screen has been cleared
@@ -65,6 +64,32 @@ def introduction():
         print(i)
     resume_key()
 
+
+def controls():
+    """
+    This functions provides instructions to the user on playing the game
+    """
+
+    controls_list = [
+        "You must input two coordinates, a number and a letter " +
+        "in order to select the \ngrid you want to fire upon:",
+        "\n1. Select the grid ROW which will appear as a NUMBER",
+        "2. Select the grid COLUMN which will appear as a LETTER\n",
+        "* If a ship is within the grid coordinates you selected, " +
+        "a hit will be \n  registered",
+        "* If the grid is empty, it will be registered as a miss",
+        "* The size of the grid and the amount of shells you have " +
+        "will be determined by \n  the difficulty level you choose"
+    ]
+    title()
+    print("Here is what you must do to defeat the invaders:")
+    sleep(2)
+    for i in controls_list:
+        print(i)
+    sleep(2)
+    print("Are you ready? (don't worry we'll show " +
+          "you the instructions again)\n")
+    resume_key()
 
 
 def print_board(board):
