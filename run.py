@@ -11,6 +11,14 @@ HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 
+def remove_screen():
+    """
+    This function clears the screen based on the users operating system
+    """
+    if os.name == "posix":
+        os.system("clear")
+    else:
+        os.system("clr")
 
 
 def resume_key():
