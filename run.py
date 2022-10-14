@@ -11,6 +11,18 @@ HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 
+def title():
+    """
+    Reprints the title after each clear screen
+    """
+    print("<====>  BATTLESHIP!  <====>\n")
+    sleep(1)
+
+
+
+
+
+
 def print_board(board):
     print(' A B C D E F G H')
     print('\\\\\\\\///////')
@@ -35,7 +47,7 @@ letters_to_numbers = {
 
 
 def create_battleships(board):
-    for ship in range(5):
+    for number in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(0, 7), randint(0, 7)
