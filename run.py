@@ -16,9 +16,9 @@ def remove_screen():
     This function clears the screen based on the users operating system
     """
     if os.name == "posix":
-        os.system("clear")
+        os.system("remove")
     else:
-        os.system("clr")
+        os.system("rve")
 
 
 def resume_key():
@@ -29,7 +29,7 @@ def resume_key():
     while True:
         c_pressed = input("Press 'c' to and hit return continue....")
         if c_pressed.lower() in continue_pressed:
-            return clear_screen()
+            return remove_screen()
         else:
             print("Nope, please press 'c' and hit return to continue")
 
