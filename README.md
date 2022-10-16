@@ -29,9 +29,8 @@ ____
 5. When the user enters their row and column guess, the guess gameboard stores these coordinates - this is not visible to the user as it is placed within the hidden board.
 6. If the coordinates on the user guess gameboard are the same as the one on the grid for the computer, the gameboard reprints showing an "X" showing a hit.
 7. If the coordinates don't match, the gameboard reprints showing a "#" to denote a miss.
-8. If the number of ships hit equals the number of ships generated and the number of of attempts has equalled 0 so the user wins.
-9. If the number of ships hit is less than the number generated and the number of missiles is equal to 0, the user loses due to the lack of turns.</br >
-</br >
+8. If the number of ships hit equals the number of ships generated and the number of of attempts has equalled 0 so the user wins.<br>
+<br/>
 
 ### 1.2 Modules Used
 * The __sleep__ function is imported from Python's module in order to stagger displayed text (see section 2.1) and create a delay before the running of selected loops.
@@ -66,18 +65,9 @@ All identified bugs have been fixed including the example shown in section 3.1 a
 * The app was created using Heroku via the following steps:
     * 
 
-### 4.2 GitHub
 
-
-#### 
-
-
-
-
-## 5. Credits
-
-
-
+### 6. Acknowledgements and Credits
+* Credits to Michael Carberry who helped me with getting my controls and introduction to work.
+* [stackoverflow](https://stackoverflow.com/questions/60405812/can-you-put-a-operator-into-a-list-comprehension) was referenced for guidance on using operators within list comprehension.
+* Finally Ajar Mahars youtube video to help me with the issues I had with indentation link here https://www.youtube.com/c/AjayMaharYT
 ----
-
-## 6. Acknowledgements
