@@ -158,7 +158,7 @@ def count_hit_battleships(board):
 
 
 # turns amount and if turns are gone print message game over or repeated input
-
+introduction()
 create_battleships(HIDDEN_BOARD)
 turns = 10
 print_board(HIDDEN_BOARD)
@@ -184,3 +184,13 @@ while turns > 0:
     if turns == 0:
         print("No turns left Game over")
         break
+
+
+def main():
+    """
+    Runs all program functions
+    """
+    introduction()
+    controls()
+
+main()
