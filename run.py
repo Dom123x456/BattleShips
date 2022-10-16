@@ -119,11 +119,11 @@ def create_battleships(board):
     """
     creates 5 battleships on the board
     """
-    for _ship in range(5):
+    for ship in range(5):
         ship_row, ship_column = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_column] == "X":
             ship_row, ship_column = randint(0, 7), randint(0, 7)
-            board[ship_row][ship_column] = "X"
+        board[ship_row][ship_column] = "X"
 
 # when input is incorrect print error messages
 
@@ -159,10 +159,9 @@ def count_hit_battleships(board):
 
 # turns amount and if turns are gone print message game over or repeated input
 introduction()
+controls()
 create_battleships(HIDDEN_BOARD)
 turns = 10
-print_board(HIDDEN_BOARD)
-print_board(GUESS_BOARD)
 while turns > 0:
     print('Guess a battleship location')
     print_board(GUESS_BOARD)
