@@ -39,7 +39,6 @@ def introduction():
     sleep(2)
     for i in intro:
         print(i)
-    resume_key()
 
 
 def controls():
@@ -62,7 +61,6 @@ def controls():
     for i in controls_list:
         print(i)
     sleep(2)
-    resume_key()
 
 
 def print_board(board):
