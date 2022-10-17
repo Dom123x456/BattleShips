@@ -1,6 +1,5 @@
 from time import sleep
 from random import randint
-import os
 
 # Legend
 # X for placement of ship and hit of ballteship
@@ -10,29 +9,6 @@ import os
 HIDDEN_BOARD = [[" "] * 8 for x in range(8)]
 # Board for displaying hits and misses
 GUESS_BOARD = [[" "] * 8 for i in range(8)]
-
-
-def remove_screen():
-    """
-    This function clears the screen based on the users operating system
-    """
-    if os.name == "posix":
-        os.system("remove")
-    else:
-        os.system("rve")
-
-
-def resume_key():
-    """
-    This function avoids repeating the below two commands
-    """
-    continue_pressed = ['c']
-    while True:
-        c_pressed = input("Press 'c' to and hit return continue....")
-        if c_pressed.lower() in continue_pressed:
-            return remove_screen()
-        else:
-            print("Nope, please press 'c' and hit return to continue")
 
 
 def title():
@@ -81,7 +57,7 @@ def controls():
         "* If the grid is empty, it will be registered as a miss #",
     ]
     title()
-    print("This is what you must do to be successful:")
+    print("\nThis is what you must do to be successful\n:")
     sleep(2)
     for i in controls_list:
         print(i)
@@ -93,8 +69,8 @@ def print_board(board):
     """
     generates board for battleship game
     """
-    print('   A B C D E F G H')
-    print('_______________________________')
+    print('\n  A B C D E F G H\n')
+    print('\n_______________________________\n')
     row_number = 1
     for row in board:
         print("%d|%s|" % (row_number, "|".join(row)))
@@ -163,25 +139,25 @@ controls()
 create_battleships(HIDDEN_BOARD)
 turns = 10
 while turns > 0:
-    print('Guess a battleship location')
+    print('\nGuess a battleship location\n')
     print_board(GUESS_BOARD)
     rows, columns = get_battleship_location()
     if GUESS_BOARD[rows][columns] == "-":
-        print("You guessed that one already.")
+        print("\nYou guessed that one already.\n")
     elif HIDDEN_BOARD[rows][columns] == "X":
-        print("Hit")
+        print("\nHit\n")
         GUESS_BOARD[rows][columns] = "X"
         turns -= 1
     else:
-        print("MISS!")
+        print("\nMISS!\n")
         GUESS_BOARD[rows][columns] = "#"
         turns -= 1
     if count_hit_battleships(GUESS_BOARD) == 5:
-        print("You win Congrats!")
+        print("\nYou win Congrats!\n")
         break
-    print("You have " + str(turns) + " turns left")
+    print("\nYou have " + str(turns) + " turns left\n")
     if turns == 0:
-        print("No turns left Game over")
+        print("\nNo turns left Game over\n")
         break
 
 
