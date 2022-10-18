@@ -44,17 +44,29 @@ Page loads an introduction screen explaining the backstory of the game which the
 
 ### 2.2 The Game Board
 My game board brings up a message of two types which is the introduction which contyains the title and the rundown of the games plot. Another message appears explaining the controls and the instructions on how to play.
+
+
 ![image](https://user-images.githubusercontent.com/108178672/196277387-f339ea42-17dd-4f3a-8eeb-1890de08f111.png)
 
+
+
 After this the game will run giving you the option to select a row then a column in that order.
+
+
 ![image](https://user-images.githubusercontent.com/108178672/196291338-a288b8c1-0e8e-48b4-8adf-a8a72b0aaa2b.png)
 
 Once the cordinates are correctly inputed they will respond with a MISS or a HIT. There are turns of 10 for the player and when those turns expire before the player hits the all ships, then the player will lose and recive a game over.
 
+
 ![image](https://user-images.githubusercontent.com/108178672/196416115-5b86dd9f-ac17-4072-a6c1-98e7221a89b7.png)
 
+
 After this game restart and will run through the introduction and controls then loads up the game.
+
+
 ![image](https://user-images.githubusercontent.com/108178672/196416855-0911132d-7496-41d1-8ce0-fe9c8e8f55d2.png) 
+
+
 ## 3. Testing
 During the development of the project,I used the "def main" to run my python through my gitpod terminal and to test for errors, like such the python programing not running the cod ein the write order as I intended which was due to the fact that they had been defined but not put into the section of code to be called foward when run.
 
